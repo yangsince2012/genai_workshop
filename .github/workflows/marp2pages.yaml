@@ -1,0 +1,48 @@
+name: marp-to-pages
+concurrency: marp-to-pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 找出所有 *_marp.md 並轉成 HTML 到 build 根目錄
+      - name: Convert all *_marp.md to HTML
+        run: |
+          mkdir -p build
+          for file in *_marp.md; do
+            [ -e "$file" ] || continue
+            base="${file%.*}"
+            docker run --rm -u root:root -v "$PWD:/home/marp/app/" marpteam/marp-cli:latest \
+              "$file" --html -o "build/${base}.html"
+          done
+
+      - name: Deploy preview
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./build/
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+
+      - name: Deploy production
+        if: ${{ github.event_name == 'push' }}
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: ./build/
