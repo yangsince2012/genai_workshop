@@ -21,14 +21,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 找出所有 *_marp.md 並轉成 HTML 到 build 根目錄
-      - name: Convert all *_marp.md to HTML
+      - name: Prepare build dir
+        run: mkdir -p build
+
+      - name: Copy images directory (if exists)
+        run: if [[ -d img ]]; then cp -R img build/img; fi
+
+      - name: Convert all marp MD to HTML
         run: |
-          mkdir -p build
           for file in *_marp.md; do
             [ -e "$file" ] || continue
             base="${file%.*}"
-            docker run --rm -u root:root -v "$PWD:/home/marp/app/" marpteam/marp-cli:latest \
+            docker run --rm -u root:root \
+              -v "$PWD:/home/marp/app/" \
+              marpteam/marp-cli:latest \
               "$file" --html -o "build/${base}.html"
           done
 
