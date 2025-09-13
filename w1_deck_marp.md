@@ -123,9 +123,11 @@ backgroundImage: url('https://img.freepik.com/premium-vector/wave-gradient-purpl
 ## :sparkles: 課程連結
 - [GitHub網站](https://github.com/)
 - [課程資料repository](https://github.com/howard-haowen/genai_workshop)
+  - [Markdown簡報](https://howard-haowen.github.io/genai_workshop/markdown_basics_marp.html)
+  - [Git簡報](https://howard-haowen.github.io/genai_workshop/git_basics_marp.html)
 - [提詞範例庫](https://prompts.chat/)
 
-## :sparkles: AI平台
+## 🤖 AI平台
 
 - [GitHub Copilot](https://github.com/copilot)
 - [Microsoft Copilot](https://copilot.microsoft.com/chats/)
