@@ -1,5 +1,5 @@
-name: marp-to-pages
-concurrency: marp-to-pages
+name: marp2pages
+concurrency: marp2pages
 
 on:
   push:
@@ -22,7 +22,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Prepare build dir
-        run: mkdir -p build
+        run: |
+          mkdir -p build
+          chmod 777 build
 
       - name: Copy images directory (if exists)
         run: if [[ -d img ]]; then cp -R img build/img; fi
@@ -33,9 +35,9 @@ jobs:
             [ -e "$file" ] || continue
             base="${file%.*}"
             docker run --rm -u root:root \
-              -v "$PWD:/home/marp/app/" \
+              -v "$PWD:/home/marp/app" \
               marpteam/marp-cli:latest \
-              "$file" --html -o "build/${base}.html"
+              "$file" --html -o "/home/marp/app/build/${base}.html"
           done
 
       - name: Deploy preview
