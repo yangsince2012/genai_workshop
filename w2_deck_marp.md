@@ -145,7 +145,6 @@ backgroundImage: url('https://img.freepik.com/premium-vector/wave-gradient-purpl
 
 ---
 
-<!--  -->
 ## :sparkles: 課程連結
 - [GitHub網站](https://github.com/)
 - [GitHub Codespaces](https://github.com/codespaces)
@@ -153,7 +152,31 @@ backgroundImage: url('https://img.freepik.com/premium-vector/wave-gradient-purpl
 - [提詞範例庫](https://prompts.chat/)
 
 ## 🤖 AI平台
-
 - [GitHub Copilot](https://github.com/copilot)
 - [Microsoft Copilot](https://copilot.microsoft.com/chats/)
 - [Google Gemini](https://gemini.google.com/)
+
+![bg right fit](https://mediaengagement.org/wp-content/uploads/2018/09/iStock-116248249-600x400.jpg)
+
+--- 
+
+## 📚 推薦VS Code擴充套件 (本課程)
+
+| 擴充套件名稱 | 功能簡介 | 適合用途 |
+|--------------|----------|----------|
+| [**Markdown All in One**](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) | 提供 Markdown 語法高亮、快速格式化、預覽等功能 | 撰寫筆記、報告、簡報、學習筆記 |
+| [**Markdown Preview Enhanced**](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) | 提供強化的 Markdown 預覽功能，支援數學公式、圖表等 | 製作教學材料、學術筆記 |
+| [**Live Server**](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) | 啟動本地伺服器，即時預覽 HTML/Markdown 編輯結果 | 預覽教學網頁、互動教材 |
+| [**Marp for VS Code**](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode) | 使用 Markdown 製作簡報，支援主題、動畫、PDF 匯出 | 製作課堂簡報、教學投影片 |
+
+--- 
+
+## 📚 推薦VS Code擴充套件 (一般寫作)
+
+| 擴充套件名稱 | 功能簡介 | 適合用途 |
+|--------------|----------|----------|
+| [**LTeX**](https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex) | 支援語法檢查、文法建議，類似 Grammarly 的功能 | 改進英文寫作、學術論文撰寫 |
+| [**LaTeX Workshop**](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) | 支援 LaTeX 編輯、編譯與預覽 | 撰寫學術論文、數學或語言學報告 |
+| [**Zotero Citation Picker**](https://marketplace.visualstudio.com/items?itemName=retorquere.zotero-citation-picker) | 與 Zotero 整合，可快速插入文獻引用 | 寫論文、整理參考資料 |
+| [**Todo Tree**](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) | 自動整理文件中的 TODO 標記，形成清單 | 管理學習進度、研究任務追蹤 |
+| [**Foam**](https://marketplace.visualstudio.com/items?itemName=foam.foam-vscode) | 類似 Roam Research 的筆記系統，支援連結思考與知識網絡 | 建構個人知識庫、研究筆記 |
