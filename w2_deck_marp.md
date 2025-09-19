@@ -165,7 +165,7 @@ backgroundImage: url('https://img.freepik.com/premium-vector/wave-gradient-purpl
 | 擴充套件名稱 | 功能簡介 | 適合用途 |
 |--------------|----------|----------|
 | [**Markdown All in One**](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) | 提供 Markdown 語法高亮、快速格式化、預覽等功能 | 撰寫筆記、報告、簡報、學習筆記 |
-| [**Markdown Preview Enhanced**](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced) | 提供強化的 Markdown 預覽功能，支援數學公式、圖表等 | 製作教學材料、學術筆記 |
+| [**Git Graph**](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) | 提供 Git 分支圖，方便查看版本歷史與進行各種 Git 操作 | 版本控制、專案管理 |
 | [**Live Server**](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) | 啟動本地伺服器，即時預覽 HTML/Markdown 編輯結果 | 預覽教學網頁、互動教材 |
 | [**Marp for VS Code**](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode) | 使用 Markdown 製作簡報，支援主題、動畫、PDF 匯出 | 製作課堂簡報、教學投影片 |
 
@@ -177,6 +177,6 @@ backgroundImage: url('https://img.freepik.com/premium-vector/wave-gradient-purpl
 |--------------|----------|----------|
 | [**LTeX**](https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex) | 支援語法檢查、文法建議，類似 Grammarly 的功能 | 改進英文寫作、學術論文撰寫 |
 | [**LaTeX Workshop**](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) | 支援 LaTeX 編輯、編譯與預覽 | 撰寫學術論文、數學或語言學報告 |
-| [**Citation Picker for Zotero**](https://marketplace.visualstudio.com/items?itemName=mblode.zotero) | 與 Zotero 整合，可快速插入文獻引用 | 寫論文、整理參考資料 |
+| [**Markdown Kanban**](https://marketplace.visualstudio.com/items?itemName=holooooo.markdown-kanban) | 提供看板式任務管理功能 | 管理專案進度、任務追蹤 |
 | [**Todo Tree**](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) | 自動整理文件中的 TODO 標記，形成清單 | 管理學習進度、研究任務追蹤 |
 | [**Foam**](https://marketplace.visualstudio.com/items?itemName=foam.foam-vscode) | 類似 Roam Research 的筆記系統，支援連結思考與知識網絡 | 建構個人知識庫、研究筆記 |
