@@ -177,6 +177,6 @@ backgroundImage: url('https://img.freepik.com/premium-vector/wave-gradient-purpl
 |--------------|----------|----------|
 | [**LTeX**](https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex) | 支援語法檢查、文法建議，類似 Grammarly 的功能 | 改進英文寫作、學術論文撰寫 |
 | [**LaTeX Workshop**](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) | 支援 LaTeX 編輯、編譯與預覽 | 撰寫學術論文、數學或語言學報告 |
-| [**Zotero Citation Picker**](https://marketplace.visualstudio.com/items?itemName=retorquere.zotero-citation-picker) | 與 Zotero 整合，可快速插入文獻引用 | 寫論文、整理參考資料 |
+| [**Citation Picker for Zotero**](https://marketplace.visualstudio.com/items?itemName=mblode.zotero) | 與 Zotero 整合，可快速插入文獻引用 | 寫論文、整理參考資料 |
 | [**Todo Tree**](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) | 自動整理文件中的 TODO 標記，形成清單 | 管理學習進度、研究任務追蹤 |
 | [**Foam**](https://marketplace.visualstudio.com/items?itemName=foam.foam-vscode) | 類似 Roam Research 的筆記系統，支援連結思考與知識網絡 | 建構個人知識庫、研究筆記 |
