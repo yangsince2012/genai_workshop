@@ -102,7 +102,7 @@ backgroundImage: url('https://img.freepik.com/premium-vector/wave-gradient-purpl
     - 選擇 `2-core` 機器類型
     - 點擊 `Create codespace`
 
-![bg right fit](https://kidz-village.ac.th/wp-content/uploads/2020/09/Hand-on-activity-min.jpg)
+![bg  fit right:45%](https://kidz-village.ac.th/wp-content/uploads/2020/09/Hand-on-activity-min.jpg)
 
 ---
 
@@ -126,6 +126,34 @@ backgroundImage: url('https://img.freepik.com/premium-vector/wave-gradient-purpl
 ![bg right fit](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Hn1PTeuK_3Hg_YS-GL1hTbeSPBDKaLxsbQ&s)
 
 --- 
+
+## 🧠 使用 GitHub Copilot 的`Add context`按鈕
+
+ ✨ 功能說明
+Copilot 的`Add context`按鈕可以讓你手動加入額外的程式碼或專案背景，幫助 Copilot 更準確地理解你的需求。
+
+ 🔧 可加入的 Context 類型舉例：
+- `#codebase`：整個專案的程式碼架構與邏輯
+- `#selection`：你選取的程式碼區塊
+- `#comment`：註解內容
+- `source control`：Git commit 訊息等版本控制資訊
+
+---
+
+## 📌 `Add context`使用方式
+
+1. 點選 Copilot Chat 視窗中的`Add context`
+2. 選擇要加入的檔案、資料夾或 Commit歷史
+3. Copilot 會根據你加入的內容回答問題或產生程式碼
+
+💡 範例
+
+```bash
+/explain #codebase
+用中文說明這個專案的功能與架構
+```
+
+---
 
 ## 🛠️本週作業
 
