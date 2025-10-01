@@ -1,0 +1,60 @@
+name: Deploy All
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Prepare build directory
+        run: |
+          mkdir -p build
+          chmod 777 build
+
+      - name: Copy images directory (if exists)
+        run: if [[ -d img ]]; then cp -R img build/img; fi
+
+      - name: Convert all Marp MD to HTML
+        run: |
+          for file in *_marp.md; do
+            [ -e "$file" ] || continue
+            base="${file%.*}"
+            docker run --rm -u root:root \
+              -v "$PWD:/home/marp/app" \
+              marpteam/marp-cli:latest \
+              "$file" --html -o "/home/marp/app/build/${base}.html"
+          done
+
+      - name: Copy Flash Cards app
+        run: |
+          mkdir -p build/apps
+          cp -r flash-cards/* build/apps/
+
+      - name: Deploy preview (PRs)
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./build/
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+
+      - name: Deploy to GitHub Pages (main branch)
+        if: ${{ github.event_name == 'push' }}
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build
