@@ -92,61 +92,93 @@ backgroundImage: url('https://img.freepik.com/premium-vector/wave-gradient-purpl
 1. 設定 GitHub Pages 發佈你的作品
 2. 編輯 `.github/workflows` 目錄下的 Actions 工作流程
 3. 提交程式碼，觀察自動部署流程
-4. 分享你的公開網頁連結
+4. 分享你的公開作品（網站或應用程式）連結
 
 ![bg  fit right:45%](https://kidz-village.ac.th/wp-content/uploads/2020/09/Hand-on-activity-min.jpg)
 
 ---
 
-## 🛠️ 01準備環境
+## 🛠️ 01複製課程資料
 
 1. 註冊[GitHub](https://github.com/)帳號（另有教育版，申請教學[影片](https://www.youtube.com/watch?v=yKrFy97mHnI)，學生[大禮包](https://education.github.com/pack)）
 1. Fork [課程資料repository](https://github.com/howard-haowen/genai_workshop)
+
+---
+
+## 🛠️ 02新增分支
+
+1. 進入你的GitHub repository
+2. 點選「Code」頁籤
+3. 點選「Branch: main」下拉選單
+4. 輸入新分支名稱（如：`deploy`），並按下 Enter 鍵
+
+---
+
+## 🛠️ 03進入開發環境
+
 1. 進入[GitHub Codespaces](https://github.com/codespaces)頁面
 1. 創建一個新的 Codespace
     - 選擇剛剛 Fork 的 repository
-    - 選擇 `main` 分支
+    - 選擇剛剛新增的分支名稱（如：`deploy`）
     - 選擇 `2-core` 機器類型
     - 點擊 `Create codespace`
 
 ---
 
-## 🛠️ 02新增分支 
+## 🛠️ 04新增一個檔名為`my_deck_marp.md`的簡報
 
-> 如何在GitHub Codespaces新增 `gh-pages` 分支
-1. 打開 Codespace 的終端機 (Terminal)
-2. 執行以下命令創建並切換到 `gh-pages` 分支：
-   ```bash
-   git checkout -b gh-pages
-   ```
-3. 確認當前分支為 `gh-pages`：
-   ```bash
-   git branch
-   ```
-4. 將變更提交並推送到 GitHub：
-   ```bash
-    git add .   
-    git commit -m "Create gh-pages branch"
-    git push origin gh-pages
-   ```  
+- 當前目錄下檔名為`*_marp.md`的檔案都是簡報
+
+```txt
+.
+├── git_basics_marp.md
+├── markdown_basics_marp.md
+├── w1_deck_marp.md
+├── w2_deck_marp.md
+├── w3_deck_marp.md
+├── w3_deck_marp.md
+└── my_deck_marp.md (這個是你要新增的檔案！)
+```
 
 ---
 
-##  🛠️ 03 GitHub Pages 設定步驟
+##  🛠️ 05 在  Codespaces 與 repository 同步檔案
+
+- 點選左側的「Source Control」圖示
+- 輸入變更的說明（如：`Add my_deck_marp.md`）
+- 點選「✔️ Commit」按鈕
+- 點選「...」按鈕，選擇「Push」將變更推送到 GitHub
+- 回到你的 GitHub repository 網頁，確認變更已經反映在你的 repository 中
+
+---
+
+##  🛠️ 06 把修改合併到主分支
+
+1. 回到你的 GitHub repository 網頁
+2. 點選「Pull requests」頁籤
+3. 點選「New pull request」按鈕
+4. 選擇 base branch 為 `main`，compare branch 為你剛剛新增的分支（如：`deploy`）
+5. 點選「Create pull request」按鈕
+6. 輸入標題與描述，然後點選「Create pull request」按鈕
+7. 點選「Merge pull request」按鈕，然後點選「Confirm merge」按鈕
+
+---
+
+##  🛠️ 06 GitHub Pages 設定步驟
 
 1. 進入你的 repository
 2. 點選「Settings」→「Pages」
-3. 選擇要發佈的分支（如：`gh-pages`）與資料夾（如：`/docs`）
-4. 儲存設定，取得網頁網址
+3. 選擇要發佈的分支（如：`gh-pages`）與資料夾（如：當前目錄`/`）
+4. 儲存設定，取得網頁基本網址（以我的 repository 為例是：`https://howard-haowen.github.io/genai_workshop`）
 
 ---
 
-##  🛠️ 04 GitHub Actions 設定步驟
-1. 在 repository 中建立 `.github/workflows` 目錄
-2. 新增 `deploy.yml`
-3. 編寫工作流程腳本(讓🤖AI幫你)
-4. 提交並推送到 GitHub 
-5. 查看 Actions 頁面，確認工作流程執行狀態
+##  🛠️ 07 GitHub Actions 設定步驟
+1. 回到 Codespaces
+1. 修改工作流程腳本`deploy.yml`(讓🤖AI幫你，參考範例`deployQnA.md`)
+1. 提交並推送到 GitHub 
+1. 查看 Actions 頁面，確認工作流程執行狀態
+1. 到 GitHub Pages 基本網址加上`/apps`（以我的 repository 為例是：`https://howard-haowen.github.io/genai_workshop/apps`），查看你的應用程式是否成功發佈
 
 ---
 
