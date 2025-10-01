@@ -152,18 +152,6 @@ backgroundImage: url('https://img.freepik.com/premium-vector/wave-gradient-purpl
 
 ---
 
-##  🛠️ 06 把修改合併到主分支
-
-1. 回到你的 GitHub repository 網頁
-2. 點選「Pull requests」頁籤
-3. 點選「New pull request」按鈕
-4. 選擇 base branch 為 `main`，compare branch 為你剛剛新增的分支（如：`deploy`）
-5. 點選「Create pull request」按鈕
-6. 輸入標題與描述，然後點選「Create pull request」按鈕
-7. 點選「Merge pull request」按鈕，然後點選「Confirm merge」按鈕
-
----
-
 ##  🛠️ 06 GitHub Pages 設定步驟
 
 1. 進入你的 repository
@@ -173,10 +161,23 @@ backgroundImage: url('https://img.freepik.com/premium-vector/wave-gradient-purpl
 
 ---
 
-##  🛠️ 07 GitHub Actions 設定步驟
-1. 回到 Codespaces
-1. 修改工作流程腳本`deploy.yml`(讓🤖AI幫你，參考範例`deployQnA.md`)
+##  🛠️ 07 把修改合併到主分支
+
+1. 回到你的 GitHub repository 網頁
+2. 點選「Pull requests」頁籤
+3. 點選「New pull request」按鈕
+4. 選擇 base branch 為 `main`，compare branch 為你剛剛新增的分支（如：`deploy`）
+5. 點選「Create pull request」按鈕
+6. 輸入標題與描述，然後點選「Create pull request」按鈕
+7. 點選「Merge pull request」按鈕，然後點選「Confirm merge」按鈕
+8. 查看新增的頁面是否成功發佈（以我的 repository 為例是：`https://howard-haowen.github.io/genai_workshop/my_deck_marp.html`）
+
+---
+
+##  🛠️ 08 GitHub Actions 設定步驟
+1. 在 Codespaces 修改工作流程腳本`deploy.yml`(腳本位置為`.github/workflows/deploy.yml`，讓🤖AI幫你，參考範例`deployQnA.md`)
 1. 提交並推送到 GitHub 
+1. 把修改合併到主分支（參考上頁步驟）
 1. 查看 Actions 頁面，確認工作流程執行狀態
 1. 到 GitHub Pages 基本網址加上`/apps`（以我的 repository 為例是：`https://howard-haowen.github.io/genai_workshop/apps`），查看你的應用程式是否成功發佈
 
